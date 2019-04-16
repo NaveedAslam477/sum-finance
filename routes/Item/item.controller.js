@@ -11,7 +11,6 @@ controller.list_all_itemModels = function (req, res) {
 	});
 };
 
-
 controller.create_a_itemModel = function (req, res) {
 	var new_itemModel = new itemModel(req.body);
 	new_itemModel.save(function (err, item) {
