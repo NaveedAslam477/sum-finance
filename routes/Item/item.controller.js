@@ -1,5 +1,5 @@
 'use strict';
-var itemModel = require('./item.model')
+var itemModel = require('./items.model')
 	var controller = {}
 
 controller.list_all_itemModels = function (req, res) {
