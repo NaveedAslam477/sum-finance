@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var itemSchema = Schema({
-	item_id:
-	{
+	item_id:{
 		type:String,
 	},
 	item_type:
