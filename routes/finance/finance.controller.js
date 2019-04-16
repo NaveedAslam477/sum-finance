@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var financeModel = require('./finance.model')
 	var controller = {}
-
+debugger;
 controller.list_all_financeModels = function (req, res) {
 	financeModel.find({}, function (err, finance) {
 		if (err)
@@ -46,7 +46,7 @@ controller.delete_a_financeModel = function (req, res) {
 	}, function (err, finance) {
 		if (err)
 			res.send(err);
-		res.json({ message: 'financeModel successfully deleted' });
+		res.json({ message: 'finance Model successfully deleted' });
 	});
 };
 
