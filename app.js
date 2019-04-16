@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 //connecting to MongoDB 
-mongoose.connect('mongodb://adnan:Adnan123@ds137206.mlab.com:37206/quickmade');
+mongoose.connect('mongodb://admin:admin123@ds139946.mlab.com:39946/sum-finance');
 mongoose.connection.on('error', function (err) {
   console.error('MongoDB connection error: ' + err);
   process.exit(-1);
