@@ -1,5 +1,4 @@
 'use strict';
-var mongoose = require('mongoose');
 var itemModel = require('./item.model')
 	var controller = {}
 
