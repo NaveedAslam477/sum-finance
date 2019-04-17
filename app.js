@@ -15,6 +15,11 @@ mongoose.connect('mongodb://admin:admin123@ds139946.mlab.com:39946/sum-finance')
 
 var app = express();
 app.use(cors());
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -24,18 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function (req, res, next) {
 
-  const origin = req.get('origin');
-
-  res.header('Access-Control-Allow-Origin', "*");
-
-  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
-
-  res.header('Access-Control-Allow-Methods', true);
-
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma, x-auth');
-});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/finance', require('./routes/finance'));
