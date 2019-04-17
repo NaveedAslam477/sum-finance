@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cors = require('cors');
 // for MongoDB connection 4
-
+//testing
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:admin123@ds139946.mlab.com:39946/sum-finance');
